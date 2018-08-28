@@ -20,7 +20,7 @@ body {
     clear: both;
     overflow: hidden;
     display: block;
-    background: #e6f9f6;
+    background: #fff;
 }
 
 .blank1 {
@@ -268,7 +268,7 @@ p:last-child { margin-bottom: 0; }
 .nav-link.active, .nav-link:hover {	color: #69c6ba;	}
 
 .navbar-toggler-icon {
-    background-image: url(../img/navbar.svg);
+    background-image: url(../img/navbar-light.svg);
 
 }
 
@@ -348,7 +348,7 @@ label { font-weight: 700; }
 .tm-form-group-pad { padding:  0 8px; }
 .tm-form-group-1 { width: 50%; }
 .tm-form-group-2 { width: 50%; }
-.tm-form-group-3 { width: 25%; }
+.tm-form-group-3 { width: 50%; }
 .tm-form-group-4 { width: 50%; margin:0 auto;}
 .form-control { border-radius: 0; }
 
@@ -387,7 +387,10 @@ label { font-weight: 700; }
 }
 
 .tm-bg-gray { background-color: #efefef; }
-.tm-about-text-wrap { max-width: 830px; }
+.tm-about-text-wrap {
+    max-width: 830px;
+    padding-top: 30px;
+}
 
 .tm-right {
     display: inline-block;
@@ -513,8 +516,8 @@ label { font-weight: 700; }
     text-transform: uppercase;
     color: white;
     font-weight: 400;
-    font-size: 0.9rem;
-    height: 100%;
+    font-size: 70%;
+    /*height: 100%;*/
 }
 
 .tm-tab-link:hover { color: white; }

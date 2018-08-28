@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{#{% load staticfiles %}#}
+{#{% load static %}#}
+{##}
+{##}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<body>#}
+{#{% include '_head.html' %}#}
+{#{% include '_navbar.html' %}#}
+{#{% include '_diet.html' %}#}
+{#{% include '_footer.html' %}#}
+{#{% include '_script.html' %}#}
+{##}
+{#</body>#}
 
-</body>
-</html>
+{% extends 'base2.html' %}
+
+{% block content %}
+
+   {% include '_diet.html' %}
+
+{% endblock %}

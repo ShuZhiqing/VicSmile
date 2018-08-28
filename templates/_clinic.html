@@ -1,0 +1,135 @@
+{#{% extends "base.html" %}#}
+{% load staticfiles %}
+{% load static %}
+{##}
+{##}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<body>#}
+{#{% block clinic %}#}
+    <div class="tm-page-wrap mx-auto">
+            <section class="tm-banner">
+                <div class="tm-container-outer tm-banner-bg">
+                    <div class="container">
+
+                        <div class="row tm-banner-row tm-banner-row-header">
+                            <div class="col-xs-12">
+                                <div class="tm-banner-header">
+                                    <h1 class="text-uppercase tm-banner-title">Find a Dental Clinic</h1>
+                                    <img src="{%  static 'img/dots-3.png' %}" alt="Dots">
+                                    <p class="tm-banner-subtitle">We assist you to choose the best.</p>
+                                    <a href="javascript:void(0)" class="tm-down-arrow-link"><i class="fa fa-2x fa-angle-down tm-down-arrow"></i></a>
+                                </div>
+                            </div>  <!-- col-xs-12 -->
+                        </div> <!-- row -->
+                        <div class="row tm-banner-row" id="tm-section-search">
+
+                            <form action="home/home.html" method="get" class="tm-search-form tm-section-pad-2">
+                                <div class="form-row tm-search-form-row">
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                                        <label for="inputLocation">My Location</label>
+                                        <input name="destination" type="text" class="form-control" id="inputLocation" placeholder="suburb or postcode">
+                                    </div>
+
+                                    <div class="form-group tm-form-group tm-form-group-1">
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
+                                            <label for="inputLanguage1">Language 1</label>
+                                            <select name="language1" class="form-control tm-select" id="inputLanguage1">
+                                                <option value="English" selected>English</option>
+                                                <option value="Arabic">Arabic</option>
+                                                <option value="French">French</option>
+                                                <option value="Hakka">Hakka</option>
+                                                <option value="Hindi">Hindi</option>
+                                                <option value="Indonesian">Indonesian</option>
+                                                <option value="Kannada">Kannada</option>
+                                                <option value="Macedonian">Macedonian</option>
+                                                <option value="Malayalam">Malayalam</option>
+                                                <option value="Mandarin">Mandarin</option>
+                                                <option value="Marathi">Marathi</option>
+                                                <option value="Persian">Persian</option>
+                                                <option value="Polish">Polish</option>
+                                                <option value="Punjabi">Punjabi</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="Tamil">Tamil</option>
+                                                <option value="Thai">Thai</option>
+                                                <option value="Telugu">Telugu</option>
+                                                <option value="Urdu">Urdu</option>
+                                                <option value="Vietnamese">Vietnamese</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
+                                            <label for="inputLanguage2">Language 2</label>
+                                            <select name="language2" class="form-control tm-select" id="inputLanguage2">
+                                                <option value="English" selected>English</option>
+                                                <option value="Arabic">Arabic</option>
+                                                <option value="French">French</option>
+                                                <option value="Hakka">Hakka</option>
+                                                <option value="Hindi">Hindi</option>
+                                                <option value="Indonesian">Indonesian</option>
+                                                <option value="Kannada">Kannada</option>
+                                                <option value="Macedonian">Macedonian</option>
+                                                <option value="Malayalam">Malayalam</option>
+                                                <option value="Mandarin">Mandarin</option>
+                                                <option value="Marathi">Marathi</option>
+                                                <option value="Persian">Persian</option>
+                                                <option value="Polish">Polish</option>
+                                                <option value="Punjabi">Punjabi</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="Tamil">Tamil</option>
+                                                <option value="Thai">Thai</option>
+                                                <option value="Telugu">Telugu</option>
+                                                <option value="Urdu">Urdu</option>
+                                                <option value="Vietnamese">Vietnamese</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
+                                            <label for="inputDistance">Distance</label>
+                                            <select name="distance" class="form-control tm-select" id="inputDistance">
+                                            	<option value="5" selected>Within 5km</option>
+                                                <option value="10">Within 10km</option>
+                                                <option value="20">Within 20km</option>
+                                                <option value="30">Within 30km</option>
+                                                <option value="40">Within 40km</option>
+{#                                                <option value="5">5</option>#}
+{#                                                <option value="6">6</option>#}
+{#                                                <option value="7">7</option>#}
+{#                                                <option value="8">8</option>#}
+{#                                                <option value="9">9</option>#}
+                                            </select>
+                                        </div>
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
+                                            <label for="inputGroup">Group</label>
+                                            <select name="group" class="form-control tm-select" id="inputGroup">
+                                                <option value="All ages" selected>All ages</option>
+                                                <option value="Children only">Children only</option>
+                                                <option value="Aboriginal and Torres Strait Islanders only">Aboriginal and Torres Strait Islanders only</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                </div> <!-- form-row -->
+                                <div class="form-row tm-search-form-row">
+
+{#                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">#}
+{#                                        <label for="inputCheckIn">Check In Date</label>#}
+{#                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">#}
+{#                                    </div>#}
+{#                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">#}
+{#                                        <label for="inputCheckOut">Check Out Date</label>#}
+{#                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">#}
+{#                                    </div>#}
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-4">
+                                        <label for="btnSubmit">&nbsp;</label>
+                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div> <!-- row -->
+                        <div class="tm-banner-overlay"></div>
+                    </div>  <!-- .container -->
+                </div>     <!-- .tm-container-outer -->
+            </section>
+        </div>
+{#{% endblock %}#}
+{#</body>#}

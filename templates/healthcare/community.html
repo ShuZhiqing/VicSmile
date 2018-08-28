@@ -1,13 +1,28 @@
-{% extends "base.html" %}
-{% load staticfiles %}
-{% load static %}
+{##}
+{#{% load staticfiles %}#}
+{#{% load static %}#}
+{##}
+{##}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<body>#}
+{#{% include '_head.html' %}#}
+{#{% include '_navbar.html' %}#}
+{##}
+{#    <h2> Community Based Services </h2>#}
+{##}
+{#{% include '_footer.html' %}#}
+{#{% include '_script.html' %}#}
+{##}
+{#</body>#}
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<body>
-{% block mainbody %}
-    <h2> Community Based Services </h2>
+{% extends 'base2.html' %}
+
+{% block content %}
+    <span class="blank" style="height:80px;"></span>
+   <h2> Community Based Services </h2>
+
 {% endblock %}
-</body>

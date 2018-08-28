@@ -1,0 +1,22 @@
+{% load staticfiles %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include '_head.html' %}
+{% include '_navbar.html' %}
+</head>
+
+<body>
+
+{% block content %}
+{% endblock %}
+
+</body>
+
+{% include '_footer.html' %}
+{% include '_script.html' %}
+

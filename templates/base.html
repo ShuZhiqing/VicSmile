@@ -907,9 +907,9 @@ Journey Template
 http://www.templatemo.com/tm-511-journey
 -->
     <!-- load stylesheets -->
-    <link rel="shortcut icon" href="{% static 'img/tooth.png' %}" />
+    <link rel="icon" href="{% static 'img/tooth.png' %}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="{%  static 'css/templatemo-style.css' %}" />                                   <!-- Templatemo style -->#}
+    <link rel="stylesheet" href="{%  static 'css/templatemo-style.css' %}" />                                   <!-- Templatemo style -->
     <link rel="stylesheet" href="{%  static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" />                <!-- Font Awesome -->
     <link rel="stylesheet" href="{%  static 'slick/slick.css' %}"/>
     <link rel="stylesheet" href="{%  static 'slick/slick-theme.css' %}"/>
@@ -924,53 +924,12 @@ http://www.templatemo.com/tm-511-journey
           <![endif]-->
       </head>
 
-      <body>
-        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>
-            <div class="tm-top-bar" id="tm-top-bar">
-                <div class="container">
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="{%  static 'img/tooth.png' %}" alt="Site logo">
-                                VicSmile
-                            </a>
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-2">Oral HealthCare</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-3">Diet and Habit</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#top">Locations </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-        </div><!-- .tm-top-bar -->
 
-        {% block mainbody %}
+<body>
+{% block mainbody %}
+{% endblock %}
+</body>
 
-        {% endblock %}
-
-            <footer class="tm-container-outer">
-                <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> VicSmile
-
-                . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">QuadCore</a></p>
-            </footer>
-        <!-- .main-content -->
-      </body>
 
     <!-- load JS files -->
     <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>             <!-- jQuery (https://jquery.com/download/) -->
@@ -980,6 +939,7 @@ http://www.templatemo.com/tm-511-journey
     <script src="{% static 'js/jquery.singlePageNav.min.js' %}"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
     <script src="{% static 'slick/slick.min.js' %}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
     <script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&callback=initMap"></script>
     <script>
         /* Google Maps
         ------------------------------------------------*/
@@ -1011,7 +971,7 @@ http://www.templatemo.com/tm-511-journey
         function loadGoogleMap(){
             var script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&v=3.exp&sensor=false&' + 'callback=initialize';
             document.body.appendChild(script);
         }
 
@@ -1024,7 +984,7 @@ http://www.templatemo.com/tm-511-journey
                 if($(window).scrollTop() > 100) {
                     $(".tm-top-bar").addClass("active");
                 } else {
-                 $(".tm-top-bar").removeClass("active");
+                 $('.tm-top-bar').removeClass("active");
                 }
             });
 
@@ -1044,9 +1004,16 @@ http://www.templatemo.com/tm-511-journey
             });
 
             // Close navbar after clicked
-            $('.nav-link').click(function(){
+            $('.navbar-toggler').click(function(){
                 $('#mainNav').removeClass('show');
+
             });
+
+           $ ('.nav-link').click(function(){
+                $('#mainNav').removeClass('show');
+
+            });
+
 
             // Slick Carousel
             $('.tm-slideshow').slick({
@@ -1062,5 +1029,4 @@ http://www.templatemo.com/tm-511-journey
 
     </script>
 
-</body>
 </html>

@@ -24,3 +24,7 @@ def community(request):
 
 def insurance(request):
     return render(request, 'healthcare/insurance.html', context={})
+
+
+def healthcare(request):
+    return render(request, 'healthcare/healthcare.html', context={})
